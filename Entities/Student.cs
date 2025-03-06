@@ -22,5 +22,6 @@ namespace Compulsory_1_DfD.Entities
         public string Email { get; set; }
         [Required]
         public DateTime EnrollmentDate { get; set; }
+        public ICollection<Enrollment> Enrollments { get; set; }
     }   
 }

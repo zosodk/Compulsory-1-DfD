@@ -1,3 +1,11 @@
+# TASK 1.1 Add relations
+Added relations between the tables "Students" and "Courses" in the UniversityDatabase. Used ICollection to create a one-to-many relationship between the two tables. (student -> Enrollments)
+Added a new migration called "AddRelations" to the Migrations folder.
+Updated the database with the new migration using the command `dotnet ef database update`.
+Syntax:
+dotnet ef migrations script InitialSchema RelationsSchema > V2__RelationsSchema.sql
+dotnet ef database update
+
 # TASK 1
 Added first migration to this branch thus creating the database and tables.
 The migration is called "InitialCreate" and it creates the tables "Students" and "Courses" with their respective columns within the Migrations folder.

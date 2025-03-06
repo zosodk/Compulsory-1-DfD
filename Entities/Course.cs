@@ -16,5 +16,7 @@ namespace Compulsory_1_DfD.Entities
         public string Title { get; set; }
         [Required]
         public int Credits { get; set; }
+        public ICollection<Enrollment> Enrollments { get; set; }
+
     }
 }
