@@ -1,3 +1,13 @@
+# TASK 4. Add Instructor relation
+Created an Instructor table and relation with the following attributes:
+Id, FirstName, LastName, Email, HireDate
+Created attribute InstructorId to the Course relation and define it as a foreign key 
+reference to the Instructor relation. Done, again, with ICollections to create a one-to-many relationship between the two tables. (Instructor -> Courses)
+Created a new migration called "AddInstructor" to the Migrations folder.
+dotnet ef migrations add AddInstructor
+dotnet ef migrations script AddStudentDateOfBirth AddInstructor > V5__AddInstructor.sql
+dotnet ef database update
+
 # TASK 3 Add DateOfBirth to Student
 Added a new column to the Students table called "DateOfBirth" of type DateTime.
 Created a new migration called "AddStudentDateOfBirth" to the Migrations folder.

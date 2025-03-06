@@ -15,7 +15,11 @@ namespace Compulsory_1_DfD.Entities
         [MaxLength(100)]
         public string Title { get; set; }
         [Required]
-        public int Credits { get; set; }
+        public int Credits { get; set; } 
+        // Foreign key for Instructor
+        public Guid? InstructorId { get; set; }
+
+        public Instructor Instructor { get; set; }
         public ICollection<Enrollment> Enrollments { get; set; }
 
     }
