@@ -14,6 +14,9 @@ namespace Compulsory_1_DfD.Entities
         [Required]
         [MaxLength(50)]
         public string FirstName { get; set; }
+        [MaxLength(50)]
+        public string MiddleName { get; set; }
+
         [Required]
         [MaxLength(50)]
         public string LastName { get; set; }

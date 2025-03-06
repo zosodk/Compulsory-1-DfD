@@ -1,3 +1,11 @@
+# TASK 2 AddMiddleName to Student
+Added a new column to the Students table called "MiddleName" of type string.
+Created a new migration called "AddMiddleName" to the Migrations folder.
+dotnet ef migrations add AddMiddleName
+dotnet ef migrations script RelationsSchema AddMiddleName > V3__AddMiddleName.sql
+dotnet ef database update
+
+
 # TASK 1.1 Add relations
 Added relations between the tables "Students" and "Courses" in the UniversityDatabase. Used ICollection to create a one-to-many relationship between the two tables. (student -> Enrollments)
 Added a new migration called "AddRelations" to the Migrations folder.
