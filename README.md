@@ -4,6 +4,7 @@ The migration is called "InitialCreate" and it creates the tables "Students" and
 To undo the migration, run the command `dotnet ef database update 0` in the terminal.
 or use the command `ef migrations remove` to remove the last migration
 Schema sql migration created with: dotnet ef migrations script 0 InitialSchema > V1__InitialSchema.sql
+Database (sqlserver developer edition) created with: `dotnet ef database update`
 
 # Compulsory 1 DfD
 The initial Db connection is configured locally with a MS SQL server developer edition
