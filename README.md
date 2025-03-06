@@ -1,3 +1,10 @@
+# TASK 3 Add DateOfBirth to Student
+Added a new column to the Students table called "DateOfBirth" of type DateTime.
+Created a new migration called "AddStudentDateOfBirth" to the Migrations folder.
+dotnet ef migrations add AddStudentDateOfBirth
+dotnet ef migrations script AddMiddleName AddStudentDateOfBirth > V4__AddStudentDateOfBirth.sql
+dotnet ef database update
+
 # TASK 2 AddMiddleName to Student
 Added a new column to the Students table called "MiddleName" of type string.
 Created a new migration called "AddMiddleName" to the Migrations folder.
