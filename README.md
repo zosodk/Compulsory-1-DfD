@@ -21,6 +21,3 @@ This is to allow the connection to the local server without a certificate.
 It is not for production use at all
 
 when build and run the program.cs runs a small test to see if the connection is working to the local DB.
-Make sure you have a SQL server running on MS SQL defaults and an empty database called UniversityDatabase
-
-
