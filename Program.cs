@@ -18,11 +18,19 @@ public class Program
         // Try to connect to the database
         try
         {
-            using (var context = new UniversityContext())
-            {
-                context.Database.OpenConnection();
-                Console.WriteLine("Successfully connected to the database!");
-            }
+          using (var context = new UniversityContext())
+    {
+        if (!context.Database.CanConnect()) // Check if database exists
+        {
+            // Create the database
+            context.Database.EnsureCreated();
+            Console.WriteLine("Database created successfully!");
+        }
+        else
+        {
+            Console.WriteLine("Successfully connected to the database!");
+        }
+    }
         }
         catch (Exception ex)
         {
