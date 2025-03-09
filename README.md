@@ -1,3 +1,18 @@
+# TASK 7 Changed the data type of the "Credits" column in the Courses table"
+Changed the data type of the "Credits" column in the Courses table from int to decimal to allow for more precise values.
+Created a new migration called "ChangeCreditsToDecimal" to the Migrations folder.
+dotnet ef migrations add Mo
+# TASK 6 Add a new table called "Departments"
+Created a new table called "Departments" with the following attributes:
+- Id (int, primary key)
+- Name (string)
+- Budget (decimal)
+- StartDate (DateTime)
+- InstructorId (int, foreign key to the Instructor table)
+- Created a one-to-many relationship between the Instructor and Department tables using ICollections.
+- Created a new migration called "AddDepartments" to the Migrations folder.
+- Created a new script called "V7__AddDepartments.sql" to the Migrations folder.
+
 # TASK 5 Rename Grade to FinalGrade
 Renamed the column "Grade" in the Enrollments table to "FinalGrade" to better reflect the purpose of the column.
 Created a new migration called "RenameGradeToFinalGrade" to the Migrations folder.
