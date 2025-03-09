@@ -1,3 +1,10 @@
+TASK 5 - Rename Grade to FinalGrade in the Enrollment table
+Updated the STATE file to and renamed the column Grade to FinalGrade in the Enrollment table.
+This reflects the current state of the database and the code in the project.
+I had to wrap my mind around not using ALTER TABLE, but just stating EXEC sp_rename 'Enrollment.Grade', 'FinalGrade', 'COLUMN';
+This is not destructive and will not delete any data in the column, just rename it. Aplications depending on the column named Grade will break, but that should teach
+DEVS doing business directly on the database to not do that :)
+
 TASK 4 - Added Instructor table and relation to Course
 Took a copy of the V3__Add_DateOfBirth.sql and added a new table for Instructors.
 Created a relation between the Instructor and Course tables.
