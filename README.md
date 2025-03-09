@@ -1,3 +1,9 @@
+# TASK 7 Modify Credits type from int to decimal
+Took a copy of Task 6 sql and added the alter table statement to change the type of the Credits column in the Course table from int to decimal(5,2).
+This is a safe conversion, because integers can easily be converted to decimals without loss of data.
+Even though a sudden change in the type of a column can break applications depending on the column, this is a safe change.
+Going from decimal to integer would be a destructive change, because the decimal type can hold more data than the integer type.
+
 # TASK 6 Added a new table for Department and added the relation for a DepartmentHead being an Instructor
 Took a copy of Task 5 sql and added the table and relation for Department and DepartmentHead.
 Created a relation between the Instructor and Department tables. Using the Unique constraint on the InstructorId in the Department table.
