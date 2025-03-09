@@ -1,3 +1,14 @@
+# TASK 5 Rename Grade to FinalGrade
+Renamed the column "Grade" in the Enrollments table to "FinalGrade" to better reflect the purpose of the column.
+Created a new migration called "RenameGradeToFinalGrade" to the Migrations folder.
+dotnet ef migrations add RenameGradeToFinalGrade
+dotnet ef migrations script AddInstructor RenameGradeToFinalGrade > V6__RenameGradeToFinalGrade.sql
+dotnet ef database update
+
+From a Database point of view, this change is non-destructive, because the META information is changed, not the data itself. The data in the column is still the same, only the name of the column is changed. This is a good practice to keep the database clean and understandable.
+From an application point of view, this change is destructive, because the application will not be able to access the column "Grade" anymore. The application will have to be updated to use the new column name "FinalGrade" instead of "Grade".
+This can be mitigated by creating a transition layer between the application and the database, so that the application can still access the column "Grade" while the database column is renamed to "FinalGrade". This transition layer can be removed once the application has been updated to use the new column name "FinalGrade".
+
 # TASK 4. Add Instructor relation
 Created an Instructor table and relation with the following attributes:
 Id, FirstName, LastName, Email, HireDate

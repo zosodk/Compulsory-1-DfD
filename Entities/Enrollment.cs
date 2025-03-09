@@ -20,5 +20,5 @@ public class Enrollment
     public Course Course { get; set; }
 
     [MaxLength(2)]
-    public int Grade { get; set; } 
+    public int FinalGrade { get; set; } 
 }
