@@ -1,3 +1,23 @@
+TASK 4 - Added Instructor table and relation to Course
+Took a copy of the V3__Add_DateOfBirth.sql and added a new table for Instructors.
+Created a relation between the Instructor and Course tables.
+Added a foreign key to the Course table for the InstructorId.
+Made sure, that IF NOT exits etc was inline all the way through the script.
+
+TASK 3 - Added Date of birth to the Student table
+Took a copy of the V2__Add_MiddleName.sql and added a column for DateOfBirth to the Student table.
+Made sure, that IF NOT exits etc was inline all the way through the script.
+
+TASK 2 - Added middlename
+Actually just took a copy of the V1__Initial_Schema.sql and added a column for MiddleName to the Student table.
+Made sure, that IF NOT exits etc was inline all the way through the script. (not the last time i'll write this)
+
+TASK 1 - Initial setup and schema, relations
+I completely forgot to update this Readme for the first three tasks, so I will do it now.
+Created the STATE sql file with the schema and relations for the database. I was focused on NOT diverging from types and names that I had used for EF.
+Funny, that one sometimes uses more time to think about the names of the tables and columns than to actually write the SQL code.
+Created the STATE file V1__Initial_Schema.sql
+
 # Compulsory 1 DfD
 The initial Db connection is configured locally with a MS SQL server developer edition
 The database is named "UniversityDatabase" and initially created empty and "Always Trust server certificate" is set to "True" in the connection string. 
@@ -6,4 +26,3 @@ It is not for production use at all
 
 when build and run the program.cs runs a small test to see if the connection is working to the local DB.
 Make sure you have a SQL server running on MS SQL defaults and an empty database called UniversityDatabase
-```
