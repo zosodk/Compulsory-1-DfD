@@ -1,7 +1,18 @@
 # TASK 7 Changed the data type of the "Credits" column in the Courses table"
 Changed the data type of the "Credits" column in the Courses table from int to decimal to allow for more precise values.
-Created a new migration called "ChangeCreditsToDecimal" to the Migrations folder.
-dotnet ef migrations add Mo
+Created a new migration called Modi to the Migrations folder.
+dotnet ef migrations add ModifyCourseCredits
+dotnet ef migrations script V7__AddDepartments Modi > V8__ModifyCourseCredits.sql
+
+Got a Warning that in the event of a migration of this V8__ModifyCourseCredits.sql, the data in the column could be lost. 
+This is because the data type of the column is being changed from int to decimal, which can result in data loss if the values 
+in the column cannot be converted to the new data type. 
+In this case, the data in the column is int to decimal - which is usually straightforward (backup is a must). If going from decimal to int then rounding and truncating could and almost 
+certainly would happen.
+In this case i would say that it is safe, eventhough destructive, to change the data type of the column from int to decimal, 
+because the data in the column can be converted to the new data type without loss of information (int -> dec).
+
+
 # TASK 6 Add a new table called "Departments"
 Created a new table called "Departments" with the following attributes:
 - Id (int, primary key)
