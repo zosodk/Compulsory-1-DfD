@@ -10,7 +10,16 @@ BEGIN
         DateOfBirth DATE NULL
     );
 END;
-
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Instructor')
+BEGIN
+    CREATE TABLE Instructor (
+        Id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
+        FirstName NVARCHAR(50) NOT NULL,
+        LastName NVARCHAR(50) NOT NULL,
+        Email NVARCHAR(100) NOT NULL UNIQUE,
+        HireDate DATE NOT NULL
+    );
+END;
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Course')
 BEGIN
     CREATE TABLE Course (
@@ -40,13 +49,3 @@ BEGIN
     );
 END;
 
-IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Instructor')
-BEGIN
-    CREATE TABLE Instructor (
-        Id UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
-        FirstName NVARCHAR(50) NOT NULL,
-        LastName NVARCHAR(50) NOT NULL,
-        Email NVARCHAR(100) NOT NULL UNIQUE,
-        HireDate DATE NOT NULL
-    );
-END;
